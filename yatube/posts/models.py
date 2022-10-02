@@ -24,8 +24,8 @@ class Post(models.Model):
         related_name="group",
         null=True,
         blank=True,
-        on_delete=models.CASCADE
+        on_delete=models.DO_NOTHING
     )
 
-
-# Create your models here.
+    def __str__(self):
+        return self.text
