@@ -21,10 +21,10 @@ class Post(models.Model):
     )
     group = models.ForeignKey(
         Group,
-        related_name="group",
+        related_name="posts",
         null=True,
         blank=True,
-        on_delete=models.DO_NOTHING
+        on_delete=models.SET_NULL
     )
 
     def __str__(self):
